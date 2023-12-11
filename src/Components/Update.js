@@ -9,13 +9,10 @@ import Form from './Form';
 import { useParams } from 'react-router-dom';
 export default function Update() {
     const {itemId} = useParams()
+    console.log(useSelector(state=>state.items))
     const items =  useSelector(React.useCallback((state)=>state.items[itemId]),[])
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const [editData,setEditData] = React.useState({})
-    React.useEffect(()=>{
-        setEditData(items[itemId])
-    },[])
+
+    console.log(items,"---------items---------------")
     return (
         <Form method ={update} initialData = {items}/>
         // <Box

@@ -12,6 +12,7 @@ const Form = ({initialData , method}) => {
         number:"",
         age:""
     }
+    console.log(initialData)
     const validate = (values)=>{
         const errors = {}
         var nameRegex = /^[a-zA-Z ]{2,30}$/;

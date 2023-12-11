@@ -42,7 +42,7 @@ export default function DenseTable({ items }) {
                                 <TableCell align="right">{item.age}</TableCell>
                                 <TableCell align="right">
                                     <Button sx={{margin:"5px"}} variant="contained" color="success"
-                                    onClick={()=>{navigate(`/update-item/${item.id}`)}}>
+                                    onClick={()=>{navigate(`/update-item/${index}`)}}>
                                         Edit
                                     </Button>
                                     <Button margin="normal" variant="contained" color="error"
